@@ -1,0 +1,36 @@
+1.	create database templemanagement;
+
+2.	CREATE TABLE `user` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Password` varchar(45) NOT NULL,
+  `fname` varchar(45) NOT NULL,
+  `lname` varchar(45) NOT NULL,
+  `uname` varchar(45) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `usertype` varchar(45) NOT NULL DEFAULT 'user',
+  PRIMARY KEY (`Id`),
+  UNIQUE KEY `Id_UNIQUE` (`Id`),
+  UNIQUE KEY `uname_UNIQUE` (`uname`)
+)
+
+3.	CREATE TABLE `marriageregistration_tbl` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `MfullName` varchar(50) NOT NULL,
+  `Mfathername` varchar(20) NOT NULL,
+  `Mmob` bigint(10) NOT NULL,
+  `Mmail` varchar(45) NOT NULL,
+  `Mnat` varchar(10) NOT NULL,
+  `Mdob` date NOT NULL,
+  `Madd` varchar(50) NOT NULL,
+  `FfullName` varchar(50) NOT NULL,
+  `Ffathername` varchar(20) NOT NULL,
+  `Fmob` bigint(10) NOT NULL,
+  `Fmail` varchar(45) NOT NULL,
+  `Fnat` varchar(10) NOT NULL,
+  `Fdob` date NOT NULL,
+  `Fadd` varchar(50) NOT NULL,
+  `MarrDate` date NOT NULL,
+  `MarrTime` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) 
